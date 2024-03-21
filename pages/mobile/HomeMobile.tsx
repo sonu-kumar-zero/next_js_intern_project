@@ -11,16 +11,16 @@ const HomeMobile = () => {
         <>
             <div className="block md:hidden h-[100dvh]">
                 <div className="flex h-fit text-sm w-full items-center justify-around pb-2">
-                    <div className="px-5 py-2 text-red-400 font-bold w-full border"
+                    <button className="px-5 py-5 text-red-400 font-bold w-full border"
                         style={{
                             backgroundColor: `${isDiscussionForm ? "#232f3e" : "#3b4f67"}`
                         }}
-                        onClick={() => SetIsDiscussionForm(true)}>DISSCUSSION FOURM</div>
-                    <div className="px-5 py-2 text-red-400 font-bold w-full border"
+                        onClick={() => SetIsDiscussionForm(true)}>DISSCUSSION FOURM</button>
+                    <button className="px-5 py-5 text-red-400 font-bold w-full border"
                         style={{
                             backgroundColor: `${isDiscussionForm ? "#3b4f67" : "#232f3e"}`
                         }}
-                        onClick={() => SetIsDiscussionForm(false)}>MARKET STORIES</div>
+                        onClick={() => SetIsDiscussionForm(false)}>MARKET STORIES</button>
                 </div>
                 <div className="flex flex-col gap-5 max-h-full overflow-y-scroll px-5">
                     {
