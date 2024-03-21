@@ -27,11 +27,11 @@ const CommentCard = ({ data }: CommentCardProps) => {
     return (
         <div>
             <div className="hidden lg:flex text-sm md:text-base shadow-lg rounded-sm p-3 md:p-5 justify-between">
-                <div className="gap-1 flex md:gap-5">
+                <div className="gap-1 flex md:gap-5 w-full">
                     <div className="">
                         <Image src={imageUrl} alt="profile" width={50} height={50} className="rounded-full min-w-[40px] min-h-[40px] max-h-[40px] max-w-[40px] md:min-w-[50px] md:min-h-[50px] md:max-h-[50px] md:max-w-[50px] object-cover" />
                     </div>
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2 w-full">
                         <div className="flex gap-2 md:gap-2 items-center">
                             <div className="font-semibold text-lg w-[200px] line-clamp-1">{title}</div>
                             <div className={`px-5 bg-blue-500  text-white rounded-full py-1`} >Sector 2</div>
