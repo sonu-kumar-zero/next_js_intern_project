@@ -5,9 +5,9 @@ import HomeMobile from "@/pages/mobile/HomeMobile";
 
 export default function Home() {
   return (
-    <main className="bg-[#eee] w-[100dvw] h-[100dvh] flex">
+    <main className="w-[100dvw] h-[100dvh] flex">
       <Navbar />
-      <div className="hidden md:flex w-full h-full justify-between py-2 pr-10 gap-32 overflow-y-scroll">
+      <div className="hidden md:flex w-full h-full justify-between py-2 pr-10 gap-10 lg:gap-32 overflow-y-scroll">
         <div className="md:w-2/3">
           <div className="ml-2 px-5 py-2 bg-gray-300 text-red-400 font-bold mb-2 w-fit">DISSCUSSION FOURM</div>
           <div className="flex flex-col gap-5">
