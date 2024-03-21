@@ -2,6 +2,8 @@ import CommentCard from "@/components/home/comments/CommentCard";
 import StorieCard from "@/components/home/stories/StorieCard";
 import Navbar from "@/components/navbar/Navbar";
 import HomeMobile from "@/pages/mobile/HomeMobile";
+import comments from "@/public/data/text/comments";
+import stories from "@/public/data/text/stories";
 
 export default function Home() {
   return (
@@ -11,27 +13,21 @@ export default function Home() {
         <div className="md:w-2/3">
           <div className="ml-2 px-5 py-2 bg-gray-300 text-red-400 font-bold mb-2 w-fit">DISSCUSSION FOURM</div>
           <div className="flex flex-col gap-5">
-            <CommentCard />
-            <CommentCard />
-            <CommentCard />
-            <CommentCard />
-            <CommentCard />
-            <CommentCard />
-            <CommentCard />
-            <CommentCard />
+            {
+              comments.map((obj, index) =>
+                <CommentCard data={obj} key={index} />
+              )
+            }
           </div>
         </div>
         <div className="w-1/3">
           <div className="px-5 py-2 bg-gray-300 text-red-400 font-bold mb-2 w-fit">MARKET STORIES</div>
           <div className="flex flex-col gap-5">
-            <StorieCard />
-            <StorieCard />
-            <StorieCard />
-            <StorieCard />
-            <StorieCard />
-            <StorieCard />
-            <StorieCard />
-            <StorieCard />
+            {
+              stories.map((obj, index) =>
+                <StorieCard data={obj} key={index} />
+              )
+            }
           </div>
         </div>
       </div>
@@ -52,6 +48,6 @@ export default function Home() {
         </div>
       </div> */}
       <HomeMobile />
-    </main>
+    </main >
   );
 }

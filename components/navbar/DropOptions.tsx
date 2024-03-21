@@ -1,39 +1,48 @@
 "use client";
-import React,{useState} from 'react';
-import { FiMessageSquare } from "react-icons/fi";
+import React, { useState } from 'react';
 import { TbChevronDown, TbChevronUp } from "react-icons/tb";
 
-const DropOptions = () => {
+type options = {
+    icons: any;
+    title: string;
+    optionsList: string[]
+}
 
-    const [isMenuOpen,setIsMenuOpen] = useState<Boolean>(false);
+type propsDropOptionsType = {
+    data: options
+}
+
+const DropOptions = ({ data }: propsDropOptionsType) => {
+
+    const [isMenuOpen, setIsMenuOpen] = useState<Boolean>(false);
 
     return (
         <div>
             <div className=" text-[#ccc] flex flex-col gap-1">
-                <div className="hover:bg-[#18202b] py-2 pl-5 pr-2 flex justify-between items-center" onClick={()=>{
-                    setIsMenuOpen((prev)=> !prev);
+                <button className="hover:bg-[#18202b] py-2 pl-5 pr-2 flex justify-between items-center" onClick={() => {
+                    setIsMenuOpen((prev) => !prev);
                 }}>
                     <div className="flex items-center gap-2">
-                        <FiMessageSquare size={24} />
-                        <div className="">Disscussion Fourm</div>
+                        {data.icons}
+                        <div className="">{data.title}</div>
                     </div>
                     <div className="">
                         {
-                           isMenuOpen ?  <TbChevronUp size={20} /> : <TbChevronDown size={20} />
-}
+                            isMenuOpen ? <TbChevronUp size={20} /> : <TbChevronDown size={20} />
+                        }
                     </div>
-                </div>
+                </button>
                 {
                     isMenuOpen && <>
-                    <div className="hover:bg-[#18202b] py-1 pl-14">Sentiment</div>
-                <div className="hover:bg-[#18202b] py-1 pl-14">Market</div>
-                <div className="hover:bg-[#18202b] py-1 pl-14">Sector</div>
-                <div className="hover:bg-[#18202b] py-1 pl-14">WatchList</div>
-                <div className="hover:bg-[#18202b] py-1 pl-14">Events</div>
-                <div className="hover:bg-[#18202b] py-1 pl-14">News/Interview</div>
+                        {
+                            data.optionsList.map((opt, index) =>
+                                <button className="hover:bg-[#18202b] py-1 pl-14 flex justify-start" key={index}>{opt}</button>
+                            )
+                        }
+
                     </>
                 }
-                
+
             </div>
         </div>
     )

@@ -5,10 +5,31 @@ import React, {
 import Image from 'next/image';
 import { TbBellFilled, TbChevronLeft, TbChevronRight } from "react-icons/tb";
 import DropOptions from './DropOptions';
+import { FiMessageSquare } from "react-icons/fi";
+import { AiFillDollarCircle } from "react-icons/ai";
+
+type options = {
+  icons: any;
+  title: string;
+  optionsList: string[];
+}
 
 const Navbar = () => {
 
   const [isNavbarOpen, setIsNavbarOpen] = useState<Boolean>(false);
+
+  const dropOptions: options[] = [
+    {
+      icons: <FiMessageSquare size={24} />,
+      title: "Disscussion Fourm",
+      optionsList: ["Sentiment", "Market", "Sector", "WatchList", "Events", "News/Interview"]
+    },
+    {
+      icons: <AiFillDollarCircle size={24} />,
+      title: "Market Stories",
+      optionsList: ["Sentiment", "Market", "Sector", "WatchList", "Events", "News/Interview"]
+    }
+  ]
 
   return (
     <>
@@ -31,8 +52,11 @@ const Navbar = () => {
 
           </div>
           <div className="w-full flex flex-col py-3 gap-1">
-            <DropOptions />
-            <DropOptions />
+            {
+              dropOptions.map((obj, index) =>
+                <DropOptions data={obj} key={index} />
+              )
+            }
           </div>
         </div>
       }
@@ -65,8 +89,11 @@ const Navbar = () => {
 
               </div>
               <div className="w-full flex flex-col py-3 gap-1">
-                <DropOptions />
-                <DropOptions />
+                {
+                  dropOptions.map((obj, index) =>
+                    <DropOptions data={obj} key={index} />
+                  )
+                }
               </div>
             </div>
           </div>
