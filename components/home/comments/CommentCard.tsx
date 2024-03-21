@@ -67,7 +67,7 @@ const CommentCard = ({ data }: CommentCardProps) => {
                     <div className="flex justify-between items-center">
                         <div className="flex items-center gap-2">
                             <div className="font-semibold text-lg overflow-x-hidden w-[120px] line-clamp-1">{title}</div>
-                            <div className={`px-3 bg-blue-500  text-white rounded-full py-0`}>Sector 2</div>
+                            <div className={`px-3 bg-blue-500 text-white rounded-full py-1 text-[0.8rem]`}>Sector 2</div>
                         </div>
                         <div className=" text-xs md:text-sm text-blue-400">{time} min ago</div>
                     </div>
