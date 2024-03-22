@@ -6,8 +6,6 @@ import { FiEye } from "react-icons/fi";
 import { FiMessageSquare } from "react-icons/fi";
 import { LuShare2 } from "react-icons/lu";
 
-
-
 type commentsType = {
     imageUrl: string;
     title: string;

@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Roboto, Poppins, Barlow } from "next/font/google";
+import { Barlow } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-const roboto = Roboto({ subsets: ["latin"], weight: ['500'] });
-const poppins = Poppins({ subsets: ["devanagari"], weight: ['500'] });
 const barlow = Barlow({ subsets: ["latin"], weight: ['500'] });
 
 export const metadata: Metadata = {
