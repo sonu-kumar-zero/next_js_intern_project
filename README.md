@@ -1,6 +1,9 @@
-Folder Structure
+Folder Structure 
+-----------------------------------------------------------------------
   /public/data: Contains raw dummy data used in the application.
-How to Run the Application
+-----------------------------------------------------------------------
+How to Run the Application :
+
 To run the NextJS application, follow these steps:
 
 Clone the Repository: Clone the repository using the provided URL.
