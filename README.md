@@ -16,5 +16,6 @@ Run the Development Server: Execute the command npm run dev to start the NextJS 
 
 Open the Application in Browser: Once the server is running, open your web browser and go to http://localhost:3000 to view the application.
 
+-----------------------------------------------------------------------------------------------------
 Note
 Please ensure that you have Node.js and npm installed on your system before running the application.
